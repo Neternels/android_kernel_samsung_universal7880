@@ -85,32 +85,6 @@ config NETHUNTER_ETHERNET_SUPPORT
 
 	select USB_RTL8152
 	
-
-config NETHUNTER_SDR_SUPPORT
-
-	bool "SDR support"
-
-	default y if NETHUNTER_SUPPORT
-
-	depends on NETHUNTER_SUPPORT
-
-	help
-
-		Enable SDR drivers support like airspy, hackrf  and msi2500.
-
-	select MEDIA_SUPPORT
-
-	select MEDIA_DIGITAL_TV_SUPPORT
-
-	select MEDIA_SDR_SUPPORT
-
-	select USB_AIRSPY
-
-	select USB_HACKRF
-
-	select USB_MSI2500
-
-
 config NETHUNTER_HID_SUPPORT
 
 	bool "HID support"
@@ -323,8 +297,6 @@ config NETHUNTER_USB_SUPPORT
 	select USB_MON
 
 	select USB_XHCI_HCD
-
-	select USB_EHCI_HCD
 
 	select USB_ACM
 
